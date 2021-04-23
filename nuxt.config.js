@@ -58,17 +58,11 @@ export default {
         // blog posts
         client.getEntries({
           content_type: "blog_post"
-        }),
-        // talks
-        client.getEntries({
-          content_type: "talk"
         })
-      ]).then(([posts, talks]) => {
+      ]).then(([posts]) => {
         return [
           // map posts
-          ...posts.items.map(post => `/blog/${post.fields.url_slug}`),
-          // map talks
-          ...talks.items.map(talk => `/talks/${talk.fields.url_slug}`)
+          ...posts.items.map(post => `/blog/${post.fields.url_slug}`)
         ];
       });
     }

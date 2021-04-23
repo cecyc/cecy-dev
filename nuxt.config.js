@@ -1,3 +1,6 @@
+const { getClient } = require("./plugins/contentful");
+const client = getClient();
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -48,5 +51,26 @@ export default {
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
+  generate: {
+    routes() {
+      return Promise.all([
+        // blog posts
+        client.getEntries({
+          content_type: "blog_post"
+        }),
+        // talks
+        client.getEntries({
+          content_type: "talk"
+        })
+      ]).then(([posts, talks]) => {
+        return [
+          // map posts
+          ...posts.items.map(post => `/blog/${post.fields.url_slug}`),
+          // map talks
+          ...talks.items.map(talk => `/talks/${talk.fields.url_slug}`)
+        ];
+      });
+    }
+  }
 };

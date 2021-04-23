@@ -49,7 +49,7 @@ export default {
       }
     ]
   ],
-
+  target: "static",
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   generate: {

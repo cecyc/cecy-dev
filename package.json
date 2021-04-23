@@ -1,0 +1,21 @@
+{
+  "name": "cecy-dev",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "contentful": "^8.2.1",
+    "core-js": "^3.9.1",
+    "lodash": "^4.17.21",
+    "nuxt": "^2.15.3",
+    "nuxt-highlightjs": "^1.0.1",
+    "vue-markdown": "^2.2.4"
+  },
+  "devDependencies": {}
+}

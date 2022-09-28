@@ -2,10 +2,10 @@
   <header>
     <div class="hero-content">
       <h1>Hi, I'm Cecy Correa!</h1>
-      <p>I'm a Software Engineer at <span class="highlight">Shopify</span>.</p>
+      <p>I'm a Software Engineer at <span class="highlight">Netlify</span>.</p>
       <p>
-        Previously at <span class="highlight">Thinkful</span> and
-        <span class="highlight">Return Path</span>.
+        Previously at <span class="highlight">Shopify</span> and
+        <span class="highlight">Thinkful</span>.
       </p>
       <social-links />
     </div>

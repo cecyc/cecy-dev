@@ -11,7 +11,7 @@
 export default {
   data() {
     return {
-      links: ["About", "Blog", "Talks", "Uses"]
+      links: ["About", "Talks", "Uses"]
     };
   }
 };
